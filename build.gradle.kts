@@ -67,6 +67,7 @@ repositories {
     maven("https://repo.spongepowered.org/maven/")
     // If you don't want to log in with your real minecraft account, remove this line
     maven("https://pkgs.dev.azure.com/djtheredstoner/DevAuth/_packaging/public/maven/v1")
+    maven ("https://jitpack.io" )
 }
 
 val shadowImpl: Configuration by configurations.creating {
@@ -83,6 +84,9 @@ dependencies {
         isTransitive = false
     }
     annotationProcessor("org.spongepowered:mixin:0.8.5-SNAPSHOT")
+    shadowImpl("com.github.Coflnet:coflskycore:3df1a5f7ff")
+    shadowImpl("com.neovisionaries:nv-websocket-client:2.14")
+
 
     // If you don't want to log in with your real minecraft account, remove this line
     runtimeOnly("me.djtheredstoner:DevAuth-forge-legacy:1.2.1")
